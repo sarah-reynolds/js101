@@ -1,0 +1,25 @@
+<script type="text/javascript">
+	
+//Directions: Given a number between 0 and 6 representing the days of the week, print "Go to work." if it's a work day and "Sleep in." if it's a weekend day. You can set up an array for the days of the week, or for extra credit, you can check out the JS Date object here).
+
+
+	// var dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wedensday", "Thursday", "Friday", "Saturday"];
+	// var userInput = Number(prompt("Give a number 0 through 6"));
+	// if((userInput == 0) || (userInput == 6)){
+	// 	console.log("Sleep in.");
+	// }else{
+	// 	console.log("Go to work.")
+	// }
+
+	var date = new Date();
+	console.log(date);
+	var day = date.getDay();
+	console.log(day);
+
+	if(day == 0) || (day == 6){
+	console.log("Sleep in.");
+	}else{
+	console.log("Go to work.")
+	}
+
+</script>

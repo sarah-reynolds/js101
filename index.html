@@ -1,0 +1,121 @@
+<script type="text/javascript">
+	
+	// Printing stuff
+
+	// alert("Hello, world.");
+	// alert("Hello again");
+
+	// console.log("Hello, world!");
+	// console.dir("Hello, world.");
+
+	// document.write("Hello, world!");
+
+	// console.dir(console);
+
+// 	var fullName = "Sarah Basinger"; //declaring
+// 	fullName = "Max Chesney"; //assigning
+// 	fullName = 'Sarah Basinger'
+// 	fullName = 'Sarah O\'Basinger';
+// 	document.write(fullName);
+
+// 	var myName = 29; // integer
+// 	myAge = 29.75; // float
+// 	var myAgeAsAString = "29";
+
+// 	document.write(myAge + 1);
+// 	var doubleMyAge = myAge + myAge;
+
+// 	var floatNumber = 3.14;
+// 	// console.log(typeof(floatNumber))
+// 	var makeMeAnInteger = parseInt(3.14);
+// 	console.log(makeMeAnInteger);
+// 	console.log(.2 + .1);
+
+// 	var theTruth = true; //true and false are keywords
+// 	console.log(typeof(theTruth));
+// 	theTruth = 1;
+
+// 	// modulus
+// 	var amIEven = 10 % 2;
+// 	console.log(amIEven)
+
+// 	var addOneToMe = 1;
+// 	addOneToMe++; // ++ increment by 1
+// 	addOneToMe--; //decrement by 1
+// 	addOneToMe += 10; // addOneToMe = addOneToMe + 10
+
+// 	myAge = 29;
+// 	console.log(myAge++);
+// 	console.log(++myAge);
+
+// // var getUserName = prompt("What is you name?");
+// // console.log(getUserName);
+
+// 	// CONDITIONALS
+
+// 	var classSize = 16;
+// 	var question = "How big is your coding class?";
+// 	var response = prompt(question, classSize);
+
+// 	if(response == 16){
+// 		console.log("you are in teh november class")
+// 	}
+
+// 	if(response !== 16){
+// 		console.log("You are NOT int the November class.")
+// 	}
+
+// // NUMBER method with convert the parameter into a number
+// 	if(Number(response) === 16){
+// 		console.log("5 rows or 4?")
+// 	}
+
+// 	var whatAmI = Number("DigitalCrafts")
+// 	console.log(whatAmI);
+
+
+	// var response = prompt("How many in your class?");
+	// if(response == 16){
+	// 	console.log("You are in the November class.")
+	// }else if(response == 15){
+	// 	console.log("You are in the July class")
+	// }
+	// else{
+	// 	console.log("You are not in the November class.")
+	// }
+
+
+	// var randomNumber = Math.random();
+	// console.log(randomNumber); // 16 digit decimal
+	// var between = Math.ceil(randomNumber * 10); // ceil will round up to nearest integer
+	// console.log(between);
+
+	// Make a prompt box that asks the user for a number between 1-10.
+	// Generate a random number between 1-10.
+	// If they match, congrat the user.
+	// If they dont, console the user and tell thenm what it was.
+
+	// - if they are wrong, but within 2 of the number, tell them they were close and what the number was.
+	// - if they are wrong but not within 2, mock them
+	// Lastly, make sure they entered a number
+
+	var userInput = prompt("Pick a number between 1-10");
+	var randomNumber = Math.random();
+	var numRoundedUp = Math.ceil(randomNumber * 10);
+	var plusOne = numRoundedUp + 1;
+	var minusOne = numRoundedUp - 1;
+	var plusTwo = numRoundedUp + 2;
+	var minusTwo = numRoundedUp - 2;
+	if(userInput > 0 && userInput < 11){
+		if(userInput == numRoundedUp){
+			console.log("Congrats! You chose " + userInput + " which is the same as my random number, " + numRoundedUp + ".")
+		}else if(userInput == plusOne || userInput == minusOne || userInput == plusTwo || userInput == minusTwo){
+			console.log("SO CLOSE! You chose " + userInput + " and I chose " + numRoundedUp + ".")
+		}else{
+			console.log("Wow not even close. You chose " + userInput + " and I chose " + numRoundedUp + ". Not a match.")
+		}
+	}else{
+		console.log("You didn't provide a number between 1 - 10.")
+	}
+
+</script>

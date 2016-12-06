@@ -1,0 +1,70 @@
+<script type="text/javascript">
+	
+	// // array
+	// var student1 = "Sean";
+	// var student2 = "Drew";
+	// var student3 = "Daniel";
+	// var studetn4 = "Kyle";
+
+	// var students = [];
+	// students = ["Sean", "Drew", "Daniel", "Kyle"];
+	// console.log(students);
+
+	// var nfcSouth1 = "Falcons";
+	// var nfcSouth2 = "Saints";
+	// var nfcSouth3 = "Panthers";
+	// var nfcSouth4 = "Bucs";
+
+	// var nfcSouth = ["Falcons", "Saints", "Panthers", "Bucs"]
+	// console.log(nfcSouth1);
+	// console.log(nfcSouth[0]);
+
+	// METHODS
+	// console.log(students);
+	// students.pop(); // will remove the last element
+	// console.log(students);
+
+	// students.push("Ryan"); // push adds an element to the end of the array
+	// console.log(students);
+
+	// make an array with at least 4 students, prompt the user for their name. if name is in there, alert them. else, add their name to the array
+
+var students = ["Amber", "Sarah", "Casey", "Michael"];
+// console.log(students);
+// var userInput = prompt("What's your name?");
+// if(userInput == students[0] || userInput == students[1] || userInput == students[2] || userInput == students[3]){
+// 	console.log("You are in the array!");
+// }else{
+// 	students.push(userInput);
+// 	console.log("You were not in the array. Now you are.");
+// 	console.log(students);
+// }
+
+// var studentSeat = prompt("Enter a seat number");
+// console.log(students[studentSeat-1]);
+
+
+// LOOP
+
+// create a boolean called Found
+var userInput = "Sarah"
+var found = false;
+for (var i = 0; i < students.length; i++){
+	if(students[i] == userInput){
+		found = true;
+		break;
+	}
+}
+if(found){
+	console.log("You're in the class");
+}else{
+	students.push(userInput);
+}
+
+// if(students.indexOf(userInput) != -1){
+// 	console.log("user is in the array")
+// }else{
+	
+// }
+
+</script>

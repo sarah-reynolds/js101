@@ -1,0 +1,39 @@
+<script type="text/javascript">
+	
+	// Make a prompt box that asks the user for a number between 1-10.
+	// Generate a random number between 1-10.
+	// If they match, congrat the user.
+	// If they dont, console the user and tell thenm what it was.
+
+	// - if they are wrong, but within 2 of the number, tell them they were close and what the number was.
+	// - if they are wrong but not within 2, mock them
+	// Lastly, make sure they entered a number
+
+
+	// ask the user to pick a number and assign it to var userInput
+	var userInput = prompt("Pick a number between 1-10");
+	// pull a random number, but this number is going to be a decimal
+	var randomNumber = Math.random();
+	// so let's turn the random number to an integer 1 - 10 by using math ceiling
+	var numRoundedUp = Math.ceil(randomNumber * 10);
+	// the next 4 variables pull all numbers up to 2 higher and 2 lower of the random number
+
+	//the user's input is going to be pulled in as a string (prompt responses are strings, so let's change their response to a number and call is changeInputToNumber
+	var changeInputToNumber = Number(userInput);
+	// check if input is Not a Number
+	if(isNaN(changeInputToNumber)){
+		console.log("You didn't provide a number!")
+	}else if(changeInputToNumber > 0 || changeInputToNumber < 1){
+		if(changeInputToNumber > 10 || changeInputToNumber < 0){
+			console.log("You provided a number, but it's supposed to be 1-10! You entered " + userInput + ".")
+		}else if(userInput == numRoundedUp){
+			console.log("Congrats! You chose " + userInput + " which is the same as my random number, " + numRoundedUp + ".")
+		}else if(userInput == plusOne || userInput == minusOne || userInput == plusTwo || userInput == minusTwo){
+			console.log("SO CLOSE! You chose " + userInput + " and I chose " + numRoundedUp + ".")
+		}else{
+			console.log("Wow not even close. You chose " + userInput + " and I chose " + numRoundedUp + ". Not a match.")
+		}
+	// this else statments means that the user did not put in a number - maybe they put in a character
+	}
+
+</script>
