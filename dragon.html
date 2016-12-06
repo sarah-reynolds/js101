@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Fight the dragon, Alduin
+	</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css" media="screen">
+	.margin-top{
+		margin-top: 20px;
+	}
+	.margin-bottom{
+		margin-bottom: 20px;
+	}
+	.imageborder{
+		border: 1px solid #eee;
+		border-radius: 6px;
+	}
+	</style>
+</head>
+<body>
+
+<div class="container margin-top">
+	<div class="row">
+		<div id="game">
+			<div class="jumbotron">
+			<p>While exploring the beautiful mountains in Skyrim, you encounter the infamous dragon, Alduin (a.k.a. The World Eater. No Pressure).</p>
+			<p>Do you fight or flee?</p>
+			
+				<div class="row ">
+					<input class="btn btn-default btn-lg" type="button" onclick="fight();" value="I am DOVAHKIIN! Fight!">
+					<input class="btn btn-default btn-lg" type="button" onclick="flee();" value="No thanks, I'll jump behind those bushes and flee.">
+					
+				</div>
+			</div>
+
+			<div class="row">
+				<h3 class="bg-success" id="goodLuck"></p>
+				<h3 class="bg-danger" id="flee"></p>
+			</div>
+			<div class="row">
+				<img name="die1" src="d1.gif">
+				<img name="die2" src="d2.gif">
+
+				<input class="btn btn-default btn-lg" type="button" onclick="rollDice();" value="Roll the dice!">
+
+				<h3 class="pull-right" id="userRoll"></h3>
+			</div>
+			<div class="row margin-top margin-bottom">
+				<img class="col-xs-6 img-responsive imageborder" name="hero" src="hero.png">
+				<img class="col-xs-6 img-responsive imageborder" name="alduin" src ="alduin.png">
+			</div>
+
+
+		</div>
+	</div>
+</div>
+	<script type="text/javascript">
+		function flee(){
+			document.images.hero.src= "hero_dead_coward.png"
+			document.getElementById('flee').innerHTML = "While trying to flee, you tripped over a rock and fell down the mountain."
+			document.getElementById('goodLuck').innerHTML = ""
+			document.images.alduin.src= "alduin.png"
+			document.getElementById('userRoll').innerHTML = ""
+		}
+
+		function fight(){
+			document.getElementById('goodLuck').innerHTML = "Go ahead and roll the dice. Good luck!"
+			document.getElementById('flee').innerHTML = ""
+		}
+
+		function rollDice(){
+			// console.log("test");
+			var randomDie1 = Math.ceil(Math.random() * 6);
+			var randomDie2 = Math.ceil(Math.random() * 6);
+
+			console.log(randomDie1);
+			console.log(randomDie2);
+
+			document.images.die1.src = "d" + randomDie1 + ".gif";
+			document.images.die2.src = "d" + randomDie2 + ".gif";
+
+			document.getElementById('userRoll').innerHTML = "You rolled: " + (randomDie1 + randomDie2)
+
+			if(randomDie1 + randomDie2 > 8){
+				document.images.alduin.src= "alduin_dead.png"
+				document.images.hero.src= "hero.png"
+			}else{
+				document.images.hero.src= "hero_dead.png"
+				document.images.alduin.src= "alduin.png"
+			}
+
+		}
+
+	</script>
+
+</body>
+</html>
